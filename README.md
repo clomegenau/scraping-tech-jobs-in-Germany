@@ -6,8 +6,13 @@ using scrapy to scrape tech job posts from Germany from various job sites.
 - scrapes job listings from multiple source (Arbeitsagentur, Berlin Startup Jobs, etc)
 
 ## Installation:
-git clone https://github.com/clomegenau/scraping-tech-jobs-in-Germany
-cd scraping-tech-jobs-in-Germany/
-python3 -m venv venv
-source venv/bin/activate 
-pip3 install -r  requirements.txt
+`git clone https://github.com/clomegenau/scraping-tech-jobs-in-Germany`
+
+`cd scraping-tech-jobs-in-Germany/`
+
+`python3 -m venv venv`
+
+`source venv/bin/activate`
+
+`pip3 install -r  requirements.txt`
+
