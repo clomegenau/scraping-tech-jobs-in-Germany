@@ -7,10 +7,6 @@ from germantechjobs.items import ArbeitsAgenTur
 class ArbeitsagenturSpider(scrapy.Spider):
     name = "arbeitsagentur"
     
-    # change this if you want more than 200 items
-    custom_settings = {
-        'CLOSESPIDER_ITEMCOUNT': 200
-    }
 
     def start_requests(self):
         url = 'https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v6/jobs'

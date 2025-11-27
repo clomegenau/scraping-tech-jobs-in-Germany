@@ -20,10 +20,8 @@ class SGermanTechJobsPipeline:
 
 class SQLitePipeline:
     def open_spider(self, spider):
-        # Create or connect to the database file when the spider starts
         self.conn = sqlite3.connect('scraped_data.db')
         self.cursor = self.conn.cursor()
-        # Create a table for your jobs
         # added UNIQUE to avoid dublicates
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS jobs (
@@ -43,7 +41,6 @@ class SQLitePipeline:
         self.conn.close()
 
     def process_item(self, item, spider):
-        # This method is called for every item the spider scrapes
         # any dublicates are gonna be ingnored
         self.cursor.execute(
             'INSERT OR IGNORE INTO jobs (title, tags, company, apply_for_this_job, location, url) VALUES (?, ?, ?, ?, ?, ?)',
