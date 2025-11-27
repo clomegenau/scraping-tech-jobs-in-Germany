@@ -16,3 +16,8 @@ using scrapy to scrape tech job posts from Germany from various job sites.
 
 `pip3 install -r  requirements.txt`
 
+## Usage:
+- to run the script:
+    `python3 run_spiders.py`
+- you can find the results in a file called 'scraped_data.db'.
+
