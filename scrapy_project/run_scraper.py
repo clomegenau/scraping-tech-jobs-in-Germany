@@ -8,7 +8,7 @@ from scrapy.utils.project import get_project_settings
 parser = argparse.ArgumentParser(description="scrapes data from popular german job posting sites")
 
 parser.add_argument('-s', '--spiders', choices=['1', '2', 'all'], default="all", help='write how many spiders do you want to run(required)')
-parser.add_argument('-i', '--items', type=int, help='write how many items do you want to scrape')
+parser.add_argument('-i', '--items', type=int, help='write how many items do you want to scrape(you can only insert a number that is equal or higher than 250)')
 
 
 if len(sys.argv) == 1:
