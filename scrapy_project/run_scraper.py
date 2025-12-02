@@ -22,10 +22,10 @@ settings = get_project_settings()
 if args.items:
     settings.set('CLOSESPIDER_ITEMCOUNT', args.items)
     print(f"Scraping limited to {args.items} items")
-# you can't set it lower than 250 because of arbetisagentur.py Pagination logic
+# the default scraped number for items is 1
 else:
-    settings.set('CLOSESPIDER_ITEMCOUNT', 250)
-    print("Using default item limit (250)")
+    settings.set('CLOSESPIDER_ITEMCOUNT', 1)
+    print("Using default item limit (1)")
 
 
 process = CrawlerProcess(settings)

@@ -14,7 +14,7 @@ class ArbeitsagenturSpider(scrapy.Spider):
         params = {
             'berufsfeld': 'Informatik',
             'page': '1',
-            'size': '250',
+            'size': '1',
             'pav': 'false',
             'facetten': 'veroeffentlichtseit,arbeitszeit,arbeitsort'
         }
@@ -63,14 +63,6 @@ class ArbeitsagenturSpider(scrapy.Spider):
     def should_continue_pagination(self, jobs, current_page):
         if not jobs:
             self.logger.info("No jobs found - stopping")
-            return False
-
-        if len(jobs) < 250:
-            self.logger.info(f"Only {len(jobs)} jobs - likely last page")
-            return False
-
-        if current_page >= 100:
-            self.logger.info("Reached maximum page limit")
             return False
 
         self.logger.info(f"Continuing to next page - got {len(jobs)} jobs")

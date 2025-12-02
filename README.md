@@ -22,3 +22,4 @@ using scrapy to scrape tech job posts from Germany from various job sites.
     `python3 run_scraper.py --help`
 - you can find the results in a file called 'scraped_data.db'.
 
+**Note**: if you don't specify the desired number after the -i flag, the default number of scraped items will be 1,
