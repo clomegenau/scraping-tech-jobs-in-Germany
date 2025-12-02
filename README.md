@@ -17,7 +17,8 @@ using scrapy to scrape tech job posts from Germany from various job sites.
 `pip3 install -r  requirements.txt`
 
 ## Usage:
-- to run the script:
-    `python3 run_spiders.py`
+- you can run 'run_scraper.py' without activating the venv.
+- run the script to see the different flags that you can use.
+    `python3 run_scraper.py --help`
 - you can find the results in a file called 'scraped_data.db'.
 
