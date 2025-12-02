@@ -118,6 +118,5 @@ class ArbeitsagenturSpider(scrapy.Spider):
         item['ref_number'] = job.get('referenznummer') or job.get('chiffrenummer', '')
         item['apply_for_this_job'] = f"https://www.arbeitsagentur.de/jobboerse/jobsuche/detail/{item['ref_number']}"
         item['url'] = item['apply_for_this_job']
-        item['tags'] = None
         return item
 

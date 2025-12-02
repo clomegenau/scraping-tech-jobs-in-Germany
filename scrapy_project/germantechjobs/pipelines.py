@@ -27,7 +27,6 @@ class SQLitePipeline:
             CREATE TABLE IF NOT EXISTS jobs (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 title TEXT,
-                tags TEXT,
                 company TEXT,
                 apply_for_this_job TEXT,
                 location TEXT,
@@ -43,10 +42,9 @@ class SQLitePipeline:
     def process_item(self, item, spider):
         # any dublicates are gonna be ingnored
         self.cursor.execute(
-            'INSERT OR IGNORE INTO jobs (title, tags, company, apply_for_this_job, location, url) VALUES (?, ?, ?, ?, ?, ?)',
+            'INSERT OR IGNORE INTO jobs (title, company, apply_for_this_job, location, url) VALUES (?, ?, ?, ?, ?)',
             (
                 item.get('title'),
-                str(item.get('tags', [])),
                 item.get('company'),
                 item.get('apply_for_this_job'),
                 item.get('location'),
