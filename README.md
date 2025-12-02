@@ -3,7 +3,7 @@ using scrapy to scrape tech job posts from Germany from various job sites.
 
 ## Features:
 - store the data in a sqlite3 data base.
-- scrapes job listings from multiple source (Arbeitsagentur, Berlin Startup Jobs, etc)
+- scrapes job listings from arbeitsagentur.de API.
 
 ## Installation:
 `git clone https://github.com/clomegenau/scraping-tech-jobs-in-Germany`
